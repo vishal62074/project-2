@@ -8,12 +8,12 @@ app = Flask(__name__)
 model1 = pickle.load(open('house_price_multiregression.pkl','rb')) 
 
 
-@house_price.route('/')
+@app.route('/')
 def home():
   
     return render_template("index2.html")
   
-@house_price.route('/predict',methods=['GET'])
+@app.route('/predict',methods=['GET'])
 
 def predict():
     
