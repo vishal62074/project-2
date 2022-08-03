@@ -4,7 +4,7 @@ from flask import Flask, request, jsonify, render_template
 import pickle
 
 
-house_price = Flask(__name__)
+app = Flask(__name__)
 model1 = pickle.load(open('house_price_multiregression.pkl','rb')) 
 
 
